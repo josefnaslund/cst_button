@@ -1,4 +1,6 @@
 // this was my first print - rev1
+// switch too low (close to desk), and not mounted at an angle i think is better
+// a bit thin and fine to print
 
 // vars
 rad=140;
