@@ -108,7 +108,7 @@ cube([1.5,15,0.5]);
 
 // adding a top button?
 
-for (i = [0 : 4]){
+for (i = [0 : 7]){
 // first add angled connector
 translate(
     [0.3+i*1, 
@@ -120,10 +120,10 @@ cube([3,2,9]);
 // then add a circtular button
 translate(
     [2.5+i*1, 
-    height+4.5 -i*0.15,
+    height+5.5 -i*0.15,
     5.37])
 rotate([7,0,0])
-cylinder(h=2, r1=3, r2=3, $fn=100);
+cylinder(h=2 - i*0.15, r1=4.10, r2=4.10, $fn=100);
 }
 // square button alternative
 *translate([0, height+0.5,6])
