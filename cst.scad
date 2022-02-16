@@ -1,4 +1,7 @@
 // This is actual rev2 version
+// Problems with this one: does not fit very well with the switch as is. 
+// The model can be filed and bended for the spring not to close the switch
+// by itself. Holes are cone shaped. thumb pressing button is a bit small?
 
 // vars
 rad=140;
