@@ -1,6 +1,7 @@
+// Rev 3. Pretty good.
+// There is a bit too much space beneath the switch lugs.
+// There could be some texture on the top button
 
-// this is rev4 not printed yet
-// vars
 rad=140;
 height=30;
 width=15;
