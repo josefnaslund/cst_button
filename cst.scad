@@ -1,6 +1,5 @@
+// new
 
-// this is rev4 not printed yet
-// vars
 rad=140;
 height=30;
 width=15;
@@ -34,8 +33,8 @@ difference(){
     // leave support for button
     // cut out button hole
     rotate([-2,0,0])
-    translate([0, height-(topCut+buttonTopSupport+switchWidth), trackWall])
-    cube([btnLength,switchWidth,width-4]);
+    translate([0, height-(topCut+buttonTopSupport+switchWidth), trackWall+1])
+    cube([btnLength,switchWidth,width-5]);
     
     // leave support for button
     translate([0, 0, trackWall])
@@ -124,6 +123,14 @@ translate(
     5.37])
 rotate([7,0,0])
 cylinder(h=2 - i*0.15, r1=4.10, r2=4.10, $fn=100);
+    
+    // add some texture
+    translate(
+    [2.5+i*1.3, 
+    height+4.0 -i*0.15,
+    5.37])
+    rotate([7,0,0])
+    cube([0.6, 4, 2.3 - (i * 0.15)]);
 }
 // square button alternative
 *translate([0, height+0.5,6])
