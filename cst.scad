@@ -1,11 +1,11 @@
 // new
-
+// Larger top button, more clearance on top, thumb texture raised
 rad=140;
 height=30;
 width=15;
 switchWidth=5.9;
 buttonTopSupport=2;
-topCut=1;
+topCut=1.2;
 buttonBottomCut=14;
 btnLength=13;
 trackWall = 3;
@@ -111,7 +111,7 @@ for (i = [0 : 7]){
 // first add angled connector
 translate(
     [0.3+i*1, 
-    1.1+height + 0.5 - i*0.15, 
+    1.1+height + 0.55 - i*0.06, 
     5]
     )
 rotate([7,0,0])
@@ -119,18 +119,18 @@ cube([3,2,9]);
 // then add a circtular button
 translate(
     [2.5+i*1, 
-    height+5.5 -i*0.15,
+    height+6.5 -i*0.15,
     5.37])
 rotate([7,0,0])
-cylinder(h=2 - i*0.15, r1=4.10, r2=4.10, $fn=100);
+cylinder(h=2 - i*0.15, r1=5.10, r2=5.10, $fn=100);
     
     // add some texture
     translate(
     [2.5+i*1.3, 
-    height+4.0 -i*0.15,
+    height+4.5 -i*0.25,
     5.37])
     rotate([7,0,0])
-    cube([0.6, 4, 2.3 - (i * 0.15)]);
+    cube([0.6, 7, 2.3 - (i * 0.15)]);
 }
 // square button alternative
 *translate([0, height+0.5,6])
