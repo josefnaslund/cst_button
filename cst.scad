@@ -5,7 +5,7 @@ height=30;
 width=15;
 switchWidth=5.9;
 buttonTopSupport=2;
-topCut=1.2;
+topCut=1;
 buttonBottomCut=14;
 btnLength=13;
 trackWall = 3;
@@ -111,11 +111,11 @@ for (i = [0 : 7]){
 // first add angled connector
 translate(
     [0.3+i*1, 
-    1.1+height + 0.55 - i*0.06, 
+    1.1+height + 0.55 + i*0.03, 
     5]
     )
 rotate([7,0,0])
-cube([3,2,9]);
+cube([3,2 - 0.08*i,9]);
 // then add a circtular button
 translate(
     [2.5+i*1, 
@@ -131,7 +131,12 @@ cylinder(h=2 - i*0.15, r1=5.10, r2=5.10, $fn=100);
     5.37])
     rotate([7,0,0])
     cube([0.6, 7, 2.3 - (i * 0.15)]);
-}
+} // end for
+
+// add more mass to the angled connector
+translate([4, height + 1.1, 5])
+cube([6.30,1.3,6]);
+
 // square button alternative
 *translate([0, height+0.5,6])
 *cube([5,5,2]);
